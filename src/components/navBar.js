@@ -1,5 +1,5 @@
 import './navBar.css';
-import carrito from './carrito.svg'
+import { Carrito } from './cartWidget';
 
 export const Menu = () => {
     return (
@@ -12,9 +12,7 @@ export const Menu = () => {
                 <li>Nosotros</li>
                 <li>Preguntas frecuentes</li>
                 <li>
-                    <div>
-                        <img src={carrito} className="carrito" alt="carrito"/>
-                    </div>
+                    <Carrito/>
                 </li>
             </ul>
         </div>
