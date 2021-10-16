@@ -1,6 +1,6 @@
 import carritoIcono from './carrito.svg'
 
-export const Carrito = () => {
+export const CartWidget = () => {
     return (
         <div>
             <img src={carritoIcono} className="carrito" alt="carrito"/>

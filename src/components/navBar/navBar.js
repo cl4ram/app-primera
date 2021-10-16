@@ -1,7 +1,7 @@
 import './navBar.css';
-import { Carrito } from './cartWidget';
+import { CartWidget } from '../cartWidget/cartWidget';
 
-export const Menu = () => {
+export const NavBar = () => {
     return (
     <nav>
         <div className="logo">TRIFON</div>
@@ -12,7 +12,7 @@ export const Menu = () => {
                 <li>Nosotros</li>
                 <li>Preguntas frecuentes</li>
                 <li>
-                    <Carrito/>
+                    <CartWidget/>
                 </li>
             </ul>
         </div>
@@ -21,12 +21,4 @@ export const Menu = () => {
     )
     
 }
-
-// export function Menu() {
-//     return (
-//         <div>
-//             <h1>Chau</h1>
-//         </div>
-//     )
-// }
 
