@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Rollo de etiquetas",
+        "price": 150,
+        "id": 1,
+        "photo": "https://http2.mlstatic.com/D_NQ_NP_767383-MLA40098629483_122019-O.webp"
+    },{
+        "name": "Rollo para controladores fiscales",
+        "price": 100,
+        "id": 2,
+        "photo": "https://http2.mlstatic.com/D_NQ_NP_701211-MLA31016973723_062019-O.webp"
+
+    }
+]

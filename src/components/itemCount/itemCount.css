@@ -26,4 +26,5 @@ button{
     background-color: transparent;
     font-size: 2rem;
     color: #6F6F6F;
+    cursor: pointer;
 }
