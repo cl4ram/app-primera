@@ -3,12 +3,13 @@
         "name": "Rollo de etiquetas",
         "price": 150,
         "id": 1,
-        "photo": "https://http2.mlstatic.com/D_NQ_NP_767383-MLA40098629483_122019-O.webp"
+        "photo": "https://http2.mlstatic.com/D_NQ_NP_767383-MLA40098629483_122019-O.webp",
+        "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed venenatis nulla. Mauris aliquam elit tincidunt eros malesuada, ut hendrerit mauris viverra. Proin varius, nunc a pellentesque lobortis, nisi felis venenatis nibh, vel scelerisque purus velit eu felis. Sed dignissim aliquet leo, in sodales velit porttitor vel. Mauris eget rhoncus nulla. Etiam et nunc in eros suscipit facilisis. Ut euismod ipsum sed sem lobortis, id finibus felis finibus. "
     },{
-        "name": "Rollo para controladores fiscales",
+        "name": "Rollo fiscal térmico",
         "price": 100,
         "id": 2,
-        "photo": "https://http2.mlstatic.com/D_NQ_NP_701211-MLA31016973723_062019-O.webp"
-
+        "photo": "https://http2.mlstatic.com/D_NQ_NP_701211-MLA31016973723_062019-O.webp",
+        "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed venenatis nulla. Mauris aliquam elit tincidunt eros malesuada, ut hendrerit mauris viverra. Proin varius, nunc a pellentesque lobortis, nisi felis venenatis nibh, vel scelerisque purus velit eu felis. Sed dignissim aliquet leo, in sodales velit porttitor vel. Mauris eget rhoncus nulla. Etiam et nunc in eros suscipit facilisis. Ut euismod ipsum sed sem lobortis, id finibus felis finibus. "
     }
 ]

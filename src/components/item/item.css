@@ -1,6 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap');
 
-.item-link{
+.card{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    border: 0px solid transparent;
+    border-radius: 20px;
+    box-shadow: 1px 1px 15px 1px rgba(92,90,90,0.68);
     font-family: 'Overpass', sans-serif;
+    color: #011E4F;
+    margin: 30px;
+}
 
+.card-imagen{
+    padding-top: 15px;
+    width: 100%;
+    height: 250px;
+}
+
+.card-data{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.card-data-titulo{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.card-data-precio{
+    text-align: right;
+    padding-right: 10px;
+    font-size: 1.5rem;
+}
+
+.card-detalle{
+    text-decoration: underline;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card-carrito{
+    background-color:#011E4F;
+    border-radius: 20px;
+    padding: 10px 0px;
+    font-size: 1.5rem;
+    margin: 0px 10px 40px 10px;
+    color: #eef1f5;
+    margin: 10px;
+    position: 0;
+}
+
+.card-carrito:hover{
+    background-color:#010f27;
+    transition: .2s;
 }
