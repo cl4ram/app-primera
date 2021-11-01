@@ -46,12 +46,7 @@ export function ItemListContainer (props) {
     return (
         <div>
             <h2>{props.greeting}</h2>
-            {productos.length ? productos.map((producto) => (
-              <div>
-                <ItemList product={producto} key={producto.id}/>
-            </div>
-            ))
-            :"Cargando..."}
+            <ItemList product={productos}/>
             <ItemCount 
                 stock={stock} 
                 initial={counter}
