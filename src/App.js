@@ -9,9 +9,6 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar/>
-      <ItemListContainer greeting="Productos"/>
-      <ItemDetailContainer/>
-
       <Switch>
         <Route exact path="/">
           <ItemListContainer greeting="Productos"/>
@@ -21,6 +18,10 @@ function App() {
         </Route>
         <Route exact path="/item/:id">
           <ItemDetailContainer/>
+        </Route>
+        <Route exact path="*">
+        <h1>Lo sentimos, parece que el sitio que estás buscando está teniendo algún problema. Te pedimos disculpas por los inconvenientes</h1>
+
         </Route>
       </Switch>
     </BrowserRouter>
