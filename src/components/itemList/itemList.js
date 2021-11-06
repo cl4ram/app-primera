@@ -7,7 +7,7 @@ export const ItemList = ({ product }) => {
             {product.length ? product.map((product) => (
                     <Item product={product} key={product.id}/>
                 ))
-            : 'Cargando...'}
+            : 'Cargando productos...'}
         </div>
     )
 }

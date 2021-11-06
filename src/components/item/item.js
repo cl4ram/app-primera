@@ -9,11 +9,9 @@ export const Item = ({ product }) => {
                 <h1 className="card-data-titulo">{product.name}</h1>
                 <span className="card-data-precio">${product.price}</span>
             </div>
-            <button className="card-detalle"> 
-                <Link to="/item/:id">
-                    Ver detalles
+                <Link to={`/item/${product.id}`}>
+                    <button className="card-detalle"> Ver detalles </button>
                 </Link>
-            </button>
         </div>
     );
 }

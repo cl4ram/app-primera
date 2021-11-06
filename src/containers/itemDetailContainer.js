@@ -1,10 +1,13 @@
 import {useEffect, useState} from "react";
 import Products from "../products.json";
-import { ItemDetail } from "../components/itemDetail/itemDetail";
+import {ItemDetail} from "../components/itemDetail/itemDetail";
+import { useParams } from "react-router";
 
 export function ItemDetailContainer () {
 
-    const [item, setItem] = useState([]);
+    const [item, setItem] = useState(null);
+
+    const { itemId } = useParams();
 
     const getInfo = (info) => 
     new Promise((resolve, reject) => {
@@ -19,15 +22,16 @@ export function ItemDetailContainer () {
 
     useEffect(() => {
         getInfo(Products)
-        .then((res) => setItem(res[0]))
+        .then((res) =>  {setItem(res.find((item) => item.id === itemId));})
         .catch((err) => console.log(err));
-      }, []);
+      }, [itemId]);
 
+      console.log(itemId)
+     
     return (
 
         <>
-        <ItemDetail item={item}/>
-
+        {item ? <ItemDetail item={item}/> : (<h1>Cargando...</h1>)}
         </>
     )
 
