@@ -1,7 +1,19 @@
 import "./itemDetail.css";
 import { ItemCount } from "../itemCount/itemCount"
+import { GoToCart } from "../goToCart/goToCart"
+import { useState } from "react";
+
 
 export const ItemDetail = ({item}) => {
+
+    const [visibility, setVisibility] = useState(true);
+    const [counterCart, setCounterCart] = useState(0)
+
+    const onAdd = (counter) => {
+        setVisibility(false);
+        setCounterCart(counter)
+    }
+
     return (
         <>
             <div >
@@ -16,11 +28,7 @@ export const ItemDetail = ({item}) => {
                         <p className="detail-datos-parrafo">{item.detail}</p>
                         <span>Quedan {item.stock} productos disponibles</span>
                     </div>
-                    <button className="detail-carrito">Agregar al carrito</button> 
-                    <ItemCount 
-                        stock={item.stock} 
-                        initial={1}
-                     />
+                    {visibility ? <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/> : <GoToCart quantity={counterCart}></GoToCart>}
                 </div> 
                 : 'Cargando...'}
             </div>

@@ -23,7 +23,9 @@ export const NavBar = () => {
                             <li>Nosotros</li>
                             <li>Preguntas frecuentes</li>
                             <li>
+                                <Link to="/cart">
                                 <CartWidget/>
+                                </Link>
                             </li>
                         </ul>
                     </div>

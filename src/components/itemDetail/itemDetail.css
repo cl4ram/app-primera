@@ -33,17 +33,3 @@
     padding: 30px 30px 40px 0px;
 }
 
-.detail-carrito{
-    grid-area: carrito;
-    background-color:#011E4F;
-    border-radius: 20px;
-    padding: 10px 0px;
-    font-size: 1.5rem;
-    margin: 0px 10px 40px 10px;
-    color: #eef1f5;
-}
-
-.detail-carrito:hover{
-    background-color:#010f27;
-    transition: .2s;
-}

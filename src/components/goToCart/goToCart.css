@@ -1,0 +1,36 @@
+.agregar-carrito{
+    background-color: rgb(3, 3, 109);
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    color: white;
+    border-radius: 20px;
+    border: solid grey 1px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+a:visited{
+    color: white;
+}
+
+.inicio{
+    background-color: rgb(3, 3, 109);
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    color: white;
+    border-radius: 20px;
+    border: solid grey 1px;
+}
+
+.btns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+}

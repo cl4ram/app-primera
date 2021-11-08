@@ -22,7 +22,7 @@ export function ItemDetailContainer () {
 
     useEffect(() => {
         getInfo(Products)
-        .then((res) =>  {setItem(res.find((item) => item.id === itemId));})
+        .then((res) =>  { itemId ? setItem(res.find((item) => item.id === itemId)) : setItem(Products)})
         .catch((err) => console.log(err));
       }, [itemId]);
 
