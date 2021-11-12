@@ -10,7 +10,7 @@ export const ItemDetail = ({item}) => {
     const { addToCart , showHideCart, showCart} = useContext(CartContext)
     const [counterCart, setCounterCart] = useState(0)
 
-    const onAdd = (counter) => {
+    const onAddHandle = (counter) => {
         showHideCart(false);
         setCounterCart(counter)
         addToCart(item , counter)
@@ -30,7 +30,7 @@ export const ItemDetail = ({item}) => {
                         <p className="detail-datos-parrafo">{item.detail}</p>
                         <span>Quedan {item.stock} productos disponibles</span>
                     </div>
-                    {!showCart ? <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/> : <GoToCart quantity={counterCart}></GoToCart>}
+                    {!showCart ? <ItemCount initial={item.quantity} stock={item.stock} id={item.id} onAdd={onAddHandle}/> : <GoToCart quantity={counterCart}/>}
                 </div> 
                 : 'Cargando...'}
             </div>

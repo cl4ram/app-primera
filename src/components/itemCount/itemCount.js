@@ -1,12 +1,13 @@
 // import './itemCount.css'
-import {useState } from "react";
+import React, {useState } from "react";
 
 
-export const ItemCount = (props) => {
+export const ItemCount = (props, ID) => {
 
     const [counter, setCounter] = useState(props.initial);
 
-    const suma = () => {
+    const suma = (e) => {
+      e.preventDefault();
       if (counter < props.stock) {
         setCounter(counter + 1)
       } else {
@@ -14,7 +15,8 @@ export const ItemCount = (props) => {
       }
     }
     
-    const resta = () => {
+    const resta = (e) => {
+      e.preventDefault();
         if (counter >= props.initial){
           setCounter(counter - 1) 
         } else{
@@ -36,7 +38,7 @@ export const ItemCount = (props) => {
                 <button onClick={resta}>-</button>
                 <span> {counter} </span>
                 <button onClick={suma}>+</button>
-                <button onClick={(e) => {handleClick(e)}}> Agegar al carrito </button>
+                <button id={ID} onClick={(e) => {handleClick(e)}}> Agegar al carrito </button>
             </div>
         </div>
     )

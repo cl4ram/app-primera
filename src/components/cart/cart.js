@@ -6,15 +6,16 @@ import { NavLink } from "react-router-dom"
 export const Cart = () => {
 
 const {cartItems, initialState} = useContext(CartContext);
-const [total, setTotal] = useState(cartItems.reduce((amount , item) => item.total + amount, 0))
+const [cartTotal, setCartTotal] = useState(cartItems.reduce((amount , item) => item.total + amount, 0))
+console.log(cartTotal)
 
     return(
         <>
         {cartItems.length !== 0 ? ( 
             <div>
-                {cartItems.map((item) => (<CartItem key={item.id} item={item} onRefresh={() => setTotal(cartItems.reduce((amount , item) => item.total + amount , 0))}/>))}
+                {cartItems.map((item) => (<CartItem key={item.id} item={item} onRefresh={() => setCartTotal(cartItems.reduce((amount , item) => item.total + amount , 0))}/>))}
                 <p>Total:</p>
-                <h1>${total}</h1>
+                <h1>${cartTotal}</h1>
                 <button>Finalizar compra</button>
                 <button onClick={()=>initialState}>Vaciar Carrito</button>
                 <NavLink to={'/'}><button>Seguir comprando</button></NavLink>
