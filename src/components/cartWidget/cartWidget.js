@@ -11,7 +11,7 @@ export const CartWidget = () => {
         <div>
             <img src={carritoIcono} className="carrito" alt="carrito"></img>
             {totalItems !== 0 && (
-                <div>{totalItems}</div>
+                <sup>{totalItems}</sup>
             )}
         </div>
     )

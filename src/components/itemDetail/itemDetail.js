@@ -16,7 +16,7 @@ export const ItemDetail = ({item, onAdd, showCount, itemsInCart}) => {
 			</div>
 			{item.stock > 0 ? (
 				!showCount ? (
-					<ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
+					<ItemCount item={item} initial={1} onAdd={onAdd}/>
 				) : (
 					<div>
 						<p>Agregaste {itemsInCart} </p>

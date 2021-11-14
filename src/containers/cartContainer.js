@@ -12,17 +12,15 @@ export function CartContainer() {
 
     return (
         <>
+        <h1>Mi carrito</h1>
         {cart.length ? (
             cart.map((item) => (
                 <div key={item.id}>
                     <img src={item.photo} alt='Foto del producto'/>
                     <h2>{item.name}</h2>
+                    <p>Agregaste {item.counter} productos</p>
                     <ItemCount
-                    stock={item.stock}
-                    initial={item.counter}
-                    item={item}
-                    showBtn={false}
-                    />
+                    item={item} initial={item.counter} visibility={false} />
                     <span>${item.price}</span>
 
                     <div onClick={() => removeItem(item.id)}>
@@ -39,10 +37,13 @@ export function CartContainer() {
                 <button onClick={() => emptyCart()}>
                     Vaciar carrito
                 </button>
+                <Link to='/'>
+                    <button>Seguir comprando</button>
+                </Link>
             </>
         ): (
             <Link to='/'>
-                <button>Seguir comprando</button>
+                <button>Ir a la tienda</button>
             </Link>
         )}
         </>

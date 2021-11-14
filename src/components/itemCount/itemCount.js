@@ -2,16 +2,16 @@ import  {useState , useContext} from "react";
 import {CartContext} from '../../context/cartContext'
 
 
-export function ItemCount({item , onAdd =null , showBtn = true}) {
+export function ItemCount({initial , item , onAdd =null , visibility = true}) {
 
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState(initial);
     const { addItem , updateItemInCart} = useContext(CartContext)
 
 
     const suma = () => {
       if (count < item.stock) {
         setCount(count + 1)
-      } if (!showBtn){
+      } if (!visibility){
         addItem(item, 1)
         updateItemInCart(item, -1)
       }
@@ -20,7 +20,7 @@ export function ItemCount({item , onAdd =null , showBtn = true}) {
     const resta = () => {
         if (count >= 1){
           setCount(count - 1);
-          } if (!showBtn){
+          } if (!visibility){
             addItem(item, -1)
             updateItemInCart(item, 1)
           }
@@ -40,7 +40,7 @@ export function ItemCount({item , onAdd =null , showBtn = true}) {
                   <span> {count} </span>
                   <button onClick={suma}>+</button>
               </div>
-              {showBtn && (
+              {visibility && (
                 <button onClick={handleClick}>Agregar al carrito</button>
               )}
           </div>

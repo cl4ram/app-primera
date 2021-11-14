@@ -2,14 +2,14 @@ import './App.css';
 import { NavBar } from './components/navBar/navBar';
 import {ItemListContainer} from './containers/itemListContainer';
 import {ItemDetailContainer} from './containers/itemDetailContainer';
-import { Cart } from './components/cart/cart';
+import { CartContainer } from './containers/cartContainer';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { CartProvider } from './context/cartContext'
+import { CartState } from './context/cartContext'
 
 function App() {
 
   return (
-    <CartProvider>
+    <CartState>
       <BrowserRouter>
         <NavBar/>
         <Switch>
@@ -23,7 +23,7 @@ function App() {
             <ItemDetailContainer/>
           </Route>
           <Route exact path="/cart">
-            <Cart/>
+            <CartContainer/>
           </Route>
           <Route exact path="*">
           <h1>Lo sentimos, parece que el sitio que estás buscando está teniendo algún problema. Te pedimos disculpas por los inconvenientes</h1>
@@ -31,7 +31,7 @@ function App() {
           </Route>
         </Switch>
       </BrowserRouter>
-    </CartProvider>
+    </CartState>
   );
 }
 
