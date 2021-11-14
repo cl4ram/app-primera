@@ -35,7 +35,7 @@ export function CartContainer() {
         )}
         {cart.length ? (
             <>
-                <h1>Total: {totalToPay}</h1>
+                <h1>Total: $ {totalToPay}</h1>
                 <button onClick={() => emptyCart()}>
                     Vaciar carrito
                 </button>

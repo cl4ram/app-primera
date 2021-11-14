@@ -6,6 +6,8 @@ import { useParams } from "react-router";
 export function ItemDetailContainer () {
 
     const [item, setItem] = useState(null);
+    const [showCount, setShowCount] = useState(false);
+    const [itemsInCart , setItemsInCart] = useState(undefined)
 
     const { itemId } = useParams();
 
@@ -28,6 +30,11 @@ export function ItemDetailContainer () {
 
           .catch((err) => console.log(err));
   }, [itemId]);
+
+  const onAdd = (items) => {
+    setShowCount(!showCount)
+    setItemsInCart(items)
+  }
     
       
     return (
@@ -35,7 +42,11 @@ export function ItemDetailContainer () {
         <>
         {item ? (
           <ItemDetail
-            product={item}
+            key={item.id}
+            item={item}
+            onAdd={onAdd}
+            showCount={showCount}
+            itemsInCart={itemsInCart}
 				/>
 			) : (
 				'Cargando...'

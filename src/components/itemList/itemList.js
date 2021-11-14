@@ -7,7 +7,7 @@ export const ItemList = ({ product }) => {
         <div className="item-list">
             {product.length ? product.map((product) => (
                     <div>
-                        <Item product={product} key={product.id}/>
+                        <Item item={product} key={product.id}/>
                     </div>
                 ))
             : 'Cargando productos...'}
