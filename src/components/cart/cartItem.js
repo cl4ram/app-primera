@@ -1,6 +1,6 @@
 import { ItemCount } from "../itemCount/itemCount"
 import { useContext} from "react"
-import { CartContext } from "../../context/cart/cartContext"
+import { CartContext } from "../../context/cartContext"
 import React, {useState} from "react"
 
 export const CartItem = ({item , onRefresh}) => {

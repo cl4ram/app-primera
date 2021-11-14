@@ -27,7 +27,7 @@ export function ItemListContainer (props) {
         <div>
             <h2>{props.greeting}</h2>
             <ItemList product={productos}/>
-          </div>
+        </div>
     )
 }
 

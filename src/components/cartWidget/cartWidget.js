@@ -1,20 +1,18 @@
 import carritoIcono from './carrito.svg'
-// import { CartContext } from '../../context/cart/cartContext'
-// import { useContext } from 'react'
-import { NavLink } from 'react-router-dom'
+import { useContext } from 'react'
+import { CartContext } from '../../context/cartContext'
 
 export const CartWidget = () => {
 
-    // const {cartItems , showCart } = useContext(CartContext)
-    // const totalItems = cartItems.reduce(function (a,b) {return a + b.quantity} , 0) 
+    const {cart} = useContext(CartContext);
+    const totalItems = cart.reduce((total, item) => total + item.counter, 0)
 
     return (
         <div>
-            <NavLink to='/cart'>
-                    <img src={carritoIcono} className="carrito" alt="carrito">
-                        {/* {showCart && totalItems >0 ? (<span>{totalItems}</span>): null} */}
-                    </img>
-            </NavLink>
+            <img src={carritoIcono} className="carrito" alt="carrito"></img>
+            {totalItems !== 0 && (
+                <div>{totalItems}</div>
+            )}
         </div>
     )
 }

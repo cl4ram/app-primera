@@ -1,6 +1,6 @@
 import { useContext , useState } from "react"
 import { CartItem } from "./cartItem"
-import { CartContext } from "../../context/cart/cartContext"
+import { CartContext } from "../../context/cartContext"
 import { NavLink } from "react-router-dom"
 
 export const Cart = () => {

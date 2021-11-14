@@ -21,18 +21,26 @@ export function ItemDetailContainer () {
     });
 
     useEffect(() => {
-        getInfo(Products)
-        .then((res) =>  { itemId ? setItem(res.find((item) => item.id === itemId)) : setItem(Products)})
-        .catch((err) => console.log(err));
-      }, [itemId]);
+      getInfo(Products)
+          .then((res) => {
+              setItem(res.find((details) => details.id === itemId));
+          })
 
-      console.log(itemId)
-     
+          .catch((err) => console.log(err));
+  }, [itemId]);
+    
+      
     return (
 
         <>
-        {item ? <ItemDetail item={item}/> : (<h1>Cargando...</h1>)}
-        </>
+        {item ? (
+          <ItemDetail
+            product={item}
+				/>
+			) : (
+				'Cargando...'
+			)}        
+      </>
     )
 
 }
