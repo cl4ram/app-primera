@@ -3,18 +3,19 @@ import {createContext, useState} from 'react'
 export const CartContext = createContext();
 export const CartState = ({children}) => {
     const [cart, setCart] = useState([]);
+    const newCart = [...cart]
 
     const addItem = (item , quantity) => {
         const newItem = {...item , counter: quantity};
         const isInCart = cart.some((product) => product.id === item.id);
         if (item.stock > 0) {
             if (!isInCart){
-                setCart([...cart , newItem]);
+                setCart([...newCart , newItem]);
             }
         } else {
             const foundedItem = cart.find((product) => product.id === item.id);
             foundedItem.counter = foundedItem.counter + quantity;
-            setCart([...cart])
+            setCart([...newCart])
         }
         return;
     };
