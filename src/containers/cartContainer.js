@@ -40,6 +40,7 @@ export function CartContainer() {
                 <Link to='/'>
                     <button>Seguir comprando</button>
                 </Link>
+                <button>Terminar compra</button>
             </>
         ): (
             <Link to='/'>
