@@ -16,7 +16,7 @@ export const NavBar = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/category/:id">
+                                <Link to="/">
                                 Productos
                                 </Link>
                             </li>

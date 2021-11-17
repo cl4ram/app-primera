@@ -1,7 +1,8 @@
 import {useEffect, useState} from "react";
-import Products from "../products.json";
 import {ItemDetail} from "../components/itemDetail/itemDetail";
 import { useParams } from "react-router";
+import {getFirestore} from "../firebase"
+import { doc, getDoc} from "@firebase/firestore";
 
 export function ItemDetailContainer () {
 
@@ -11,26 +12,18 @@ export function ItemDetailContainer () {
 
     const { itemId } = useParams();
 
-    const getInfo = (info) => 
-    new Promise((resolve, reject) => {
-      setTimeout(() =>{
-        if (info) {
-          resolve(info);
-        }else {
-          reject("Por favor, intentá nuevamente en unos segundos");
+  useEffect(() => {
+    const db = getFirestore();
+    const getProduct = (db) => {
+      const item = doc(db, "items" , itemId);
+      getDoc(item).then((snapshot) => {
+        if (snapshot.exists()) {
+          setItem(snapshot.data())
         }
-      }, 2000);
-    });
-
-    useEffect(() => {
-      getInfo(Products)
-          .then((res) => {
-              setItem(res.find((details) => details.id === itemId));
-          })
-
-          .catch((err) => console.log(err));
-  }, [itemId]);
-
+      })
+    };
+    getProduct(db)
+  }, [itemId])
   const onAdd = (items) => {
     setShowCount(!showCount)
     setItemsInCart(items)
