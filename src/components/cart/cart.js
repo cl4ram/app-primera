@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
-import { CartContext } from '../context/cartContext'
-import { ItemCount } from '../components/itemCount/itemCount'
+import { useContext, useState } from 'react';
+import { CartContext } from '../../context/cartContext'
+import { ItemCount } from '../itemCount/itemCount'
+import { Form } from '../form/form';
 
-export function CartContainer() {
+export function Cart() {
+
+    const [show, setShow] = useState(false)
     const {cart , removeItem , emptyCart} = useContext(CartContext);
 
-    const totalToPay = cart.reduce ((total , item) => {
+    const total = cart.reduce ((total , item) => {
         return total + item.price * item.counter
     }, 0 );
 
@@ -33,14 +36,16 @@ export function CartContainer() {
         )}
         {cart.length ? (
             <>
-                <h1>Total: $ {totalToPay}</h1>
+                <h1>Total: $ {total}</h1>
                 <button onClick={() => emptyCart()}>
                     Vaciar carrito
                 </button>
                 <Link to='/'>
                     <button>Seguir comprando</button>
                 </Link>
-                <button>Terminar compra</button>
+                <button onClick={() => setShow(true)}>Terminar compra</button>
+                <Form show={show} total={total} items={cart} Clean={emptyCart} close={() => setShow(false)}/>
+
             </>
         ): (
             <Link to='/'>

@@ -31,8 +31,7 @@ export function ItemListContainer (props) {
 
   return (
     <div>
-      <h2>{props.greeting}</h2>
-      <ItemList product={productos} tipo={category}/>
+      <ItemList product={productos} tipo={category} key={productos.id}/>
     </div>
     )
 }

@@ -2,9 +2,10 @@ import './App.css';
 import { NavBar } from './components/navBar/navBar';
 import {ItemListContainer} from './containers/itemListContainer';
 import {ItemDetailContainer} from './containers/itemDetailContainer';
-import { CartContainer } from './containers/cartContainer';
+import { Cart } from './components/cart/cart';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { CartState } from './context/cartContext'
+import {Form} from './components/form/form'
 
 function App() {
 
@@ -23,8 +24,12 @@ function App() {
             <ItemDetailContainer/>
           </Route>
           <Route exact path="/cart">
-            <CartContainer/>
+            <Cart/>
           </Route>
+          <Route exact path="/form">
+            <Form/>
+          </Route>
+
           <Route exact path="*">
           <h1>Lo sentimos, parece que el sitio que estás buscando está teniendo algún problema. Te pedimos disculpas por los inconvenientes</h1>
 
