@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<a href="https://imgflip.com/gif/5vtfgk"></a>
+<div style="width:360px;max-width:100%;"><div style="height:0;padding-bottom:53.33%;position:relative;"><iframe width="360" height="192" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameBorder="0" src="https://imgflip.com/embed/5vtfgk"></iframe></div><p><a href="https://imgflip.com/gif/5vtfgk">via Imgflip</a></p></div>
 ## Available Scripts
 
 In the project directory, you can run:
