@@ -16,8 +16,8 @@ export const Form = ({items , total , Clean, show , close}) => {
           name: "name"
         },
         {
-          label: "Teléfono",
-          name: "phone"
+          label: "Apellido",
+          name: "surname"
         },
         {
           label: "Mail",
@@ -65,7 +65,7 @@ export const Form = ({items , total , Clean, show , close}) => {
                         </div>
                     ))}
                 <div className="modal-footer">
-                    <button onClick={sendOrder} onKeyDown={() => setConfirm(true)} className="button-after" disabled={!(client.name && client.phone && client.email)}>Enviar</button>
+                    <button onClick={sendOrder} onKeyDown={() => setConfirm(true)} className="button-after" disabled={!(client.name && client.surname && client.email)}>Enviar</button>
                     <button onClick={close} className="button-after">Cerrar</button>
                 </div>
             </div>
