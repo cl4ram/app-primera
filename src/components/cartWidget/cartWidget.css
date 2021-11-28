@@ -1,0 +1,12 @@
+.bubble{
+    background-color: #F25D27;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    position: relative;
+    left: 20px;
+    top: 14px;
+    color:#F2F2F2;
+    width: 60%;
+}

@@ -1,11 +1,11 @@
 import  {useState , useContext} from "react";
 import {CartContext} from '../../context/cartContext'
-
+import './itemCount.css'
 
 export function ItemCount({initial , item , onAdd =null , visibility = true}) {
 
     const [count, setCount] = useState(initial);
-    const { addItem , updateItemInCart} = useContext(CartContext)
+    const { addItem} = useContext(CartContext)
 
 
     const suma = () => {
@@ -13,7 +13,6 @@ export function ItemCount({initial , item , onAdd =null , visibility = true}) {
         setCount(count + 1)
       } if (!visibility){
         addItem(item, 1)
-        updateItemInCart(item, -1)
       }
     }
     
@@ -22,7 +21,6 @@ export function ItemCount({initial , item , onAdd =null , visibility = true}) {
           setCount(count - 1);
           } if (!visibility){
             addItem(item, -1)
-            updateItemInCart(item, 1)
           }
         } 
 
@@ -36,12 +34,14 @@ export function ItemCount({initial , item , onAdd =null , visibility = true}) {
       return (
           <div className="containerContador">
               <div className="contador">
-                  <button onClick={resta}>-</button>
+                  <button onClick={resta} className="contador-control">-</button>
                   <span> {count} </span>
-                  <button onClick={suma}>+</button>
+                  <button onClick={suma} className="contador-control">+</button>
               </div>
               {visibility && (
-                <button onClick={handleClick}>Agregar al carrito</button>
+                <div className="button-container">
+                  <button onClick={handleClick} className="button">Agregar al carrito</button>
+                </div>
               )}
           </div>
       )

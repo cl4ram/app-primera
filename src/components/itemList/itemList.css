@@ -1,6 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap');
-
 .item-list{
     display: flex;
-    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
+
+.category-button{
+    background-color: #F25D27;
+    color: whitesmoke;
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.2rem;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 10px;
+    height: 7vh;
+}
+
+.category-container{
+    display: flex;
+    justify-content: center;
+}
+
+.ring-container{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

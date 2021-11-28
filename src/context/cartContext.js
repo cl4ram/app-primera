@@ -28,16 +28,8 @@ export const CartState = ({children}) => {
         setCart([])
     }
 
-    const updateItemsInCart = (item, num) => {
-        if (item.stock > 0) {
-                item.stock = item.stock + num;
-            }
-            return console.log('Stock' , item.stock)
-        }
-
-
     return (
-        <CartContext.Provider value = {{cart , addItem , removeItem , emptyCart , updateItemsInCart}}>
+        <CartContext.Provider value = {{cart , addItem , removeItem , emptyCart }}>
             {children}
         </CartContext.Provider>
     )

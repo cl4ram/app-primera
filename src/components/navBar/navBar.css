@@ -1,11 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Chivo&display=swap');
-
 nav{
-    background-color: #eef1f5;
-    font-family: 'Chivo', sans-serif;
+    background-color: #2D3073;
+    font-family: 'Montserrat', sans-serif;
     padding: 10px;
     display: flex;
-    color: #011E4F;
+    color: #F2F2F2;
+    height: 10vh;
+    position: sticky;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 3rem;
+}
+
+.sticky{
+    position: sticky;
+    top: 0;
 }
 
 .logo {
@@ -19,24 +26,20 @@ nav{
     display: flex;
     width: 100%;
     justify-content: flex-end;
-    flex-direction: row;
-    position: relative;
     font-size: 1.2rem;
 }
 
 .menu ul {
     display: flex;
+    align-items: center;
+
 }
 
 .menu ul li{
     margin: 0 20px;
     list-style: none;
     cursor: pointer;
-}
-
-.menu ul li:hover{
-    color: grey;
-    transition: 0.2s;
+    color: #F2F2F2;
 }
 
 .carrito{

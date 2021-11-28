@@ -42,8 +42,10 @@ export function ItemDetailContainer () {
             itemsInCart={itemsInCart}
 				/>
 			) : (
-				'Cargando...'
-			)}        
+          <div className="ring-container">
+            <div className="lds-dual-ring"></div>
+          </div>
+)}        
       </>
     )
 

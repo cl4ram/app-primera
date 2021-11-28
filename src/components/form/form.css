@@ -8,19 +8,49 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #020659;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 .modal-content{
     width: 500px;
-    background-color: #fff;
+    background-color: #F2F2F2;
+    border-radius: 5px;
 }
 
 .modal-header , .modal-footer{
     padding: 10px;
 }
 
+.modal-footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .modal-body{
     padding: 10px;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.button-after:disabled{
+    background-color: #f39b7b;
+    cursor: default;
+}
+
+label , input {
+    display: flex;
+}
+
+input{
+    border: none;
+    border-bottom: #020659 solid 2px;
+    background-color: transparent;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    width: 90%;
 }
