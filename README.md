@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+![Papelera Trifon - Google Chrome 2021-11-28 11-42-26](https://user-images.githubusercontent.com/77849498/143773374-98786065-15bd-465a-ae18-1c4ddbc58b7a.gif)
+
 ## Available Scripts
 
 In the project directory, you can run:
